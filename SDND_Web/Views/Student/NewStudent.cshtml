@@ -1,0 +1,119 @@
+﻿@model SDND_Web.Models.Student 
+@{
+    ViewBag.Title = "NewStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-xs-12 mb-1">
+        <h2 class="content-header-title">New Student</h2>
+    </div>
+    @*<div class="content-header-right breadcrumbs-right breadcrumbs-top col-md-6 col-xs-12">
+        <div class="breadcrumb-wrapper col-xs-12">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">Form Layouts</a>
+                </li>
+                <li class="breadcrumb-item active">
+                    <a href="#">Basic Forms</a>
+                </li>
+            </ol>
+        </div>
+    </div>*@
+</div>
+<div class="content-body">
+    <!-- Basic form layout section start -->
+    <section id="basic-form-layouts">
+        <div class="row match-height">
+            <div class="col-md-12">
+                <div class="card" style="height: 992px;">
+                    <div class="card-header">
+                        <h4 class="card-title" id="basic-layout-form">Student Info</h4>
+                        <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                        <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                <li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
+                                <li><a data-action="reload"><i class="icon-reload"></i></a></li>
+                                <li><a data-action="expand"><i class="icon-expand2"></i></a></li>
+                                <li><a data-action="close"><i class="icon-cross2"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body collapse in">
+                        <div class="card-block">
+                            <form class="form" method="post" action="/Student/SaveStudent">
+                                <div class="form-body">
+                                    <h4 class="form-section"><i class="icon-head"></i> Personal Info</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="projectinput1">Student Name</label>
+                                                @Html.TextBoxFor(m => m.StudentName, new { @type = "text", @class = "form-control", id = "StdName", placeholder = "Student Name" })
+                                                @*<input type="text" id="projectinput1" class="form-control" placeholder="First Name" name="fname">*@
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="projectinput2">Father Name</label>
+                                                @Html.TextBoxFor(m => m.FName, new { @type = "text", @class = "form-control", id = "FName", placeholder = "Father Name" })
+                                                @*<input type="text" id="projectinput2" class="form-control" placeholder="Last Name" name="lname">*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="projectinput3">Mobile</label>
+                                                @Html.TextBoxFor(m => m.Mobile, new { @type = "text", @class = "form-control", id = "MobNo", placeholder = "Mobile Number" })
+                                                @*<input type="text" id="projectinput1" class="form-control" placeholder="First Name" name="fname">*@
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="projectinput4">CNIC</label>
+                                                @Html.TextBoxFor(m => m.CNIC, new { @type = "text", @class = "form-control", id = "CNIC", placeholder = "CNIC" })
+                                                @*<input type="text" id="projectinput2" class="form-control" placeholder="Last Name" name="lname">*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="projectinput5">Gender</label>
+                                                @Html.TextBoxFor(m => m.Gender, new { @type = "text", @class = "form-control", id = "Gender", placeholder = "Male/Female" })
+                                                @*<input type="text" id="projectinput1" class="form-control" placeholder="First Name" name="fname">*@
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="projectinput6">Address</label>
+                                                @Html.TextBoxFor(m => m.Address, new { @type = "text", @class = "form-control", id = "Address", placeholder = "Address" })
+                                                @*<input type="text" id="projectinput2" class="form-control" placeholder="Last Name" name="lname">*@
+                                            </div>
+                                        </div>
+                                    </div>              
+
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-warning mr-1">
+                                            <i class="icon-cross2"></i> Cancel
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="icon-check2"></i> Save
+                                        </button>
+                                    </div>
+                                </div>
+
+                            
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
