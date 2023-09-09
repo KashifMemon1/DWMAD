@@ -1,2 +1,2 @@
-# DWMAD
+# Student Portal
 .Net Project
